@@ -9,7 +9,9 @@ import ElementUI from 'element-ui'
 Vue.use(ElementUI);
 
 Vue.config.productionTip = false
+
 import 'element-ui/lib/theme-chalk/index.css'    // 默认主题
+
 import { localStorageGetItem } from "./utils/index.js"
 
 

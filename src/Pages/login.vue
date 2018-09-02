@@ -12,6 +12,9 @@
                 <div class="login-btn">
                     <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
                 </div>
+                <div class='desc'>
+                  账号：admin 密码：123456
+                </div>
             </el-form>
         </div>
     </div>
@@ -36,25 +39,39 @@ export default {
   },
   methods: {
     submitForm(ruleForm) {
-      const self = this;
-      self
-        .$HTTPPost("/duser/login", {
-          loginName: self.ruleForm.username,
-          password: self.ruleForm.password
-        })
-        .then(data => {
-          localStorageSetItem("a", 2);
+      if (
+        this.ruleForm.username === "admin" &&
+        this.ruleForm.password === "123456"
+      ) {
 
-          this.$router.push({
-            path: "/home"
-          });
+        localStorageSetItem("a", 2);
 
-          self.$store.dispatch("updateCurUserId", "22222");
-          console.log(self.$store.state.curUserId);
-        })
-        .catch(err => {
-          console.log(err);
+        this.$router.push({
+          path: "/home"
         });
+        this.$store.dispatch("updateCurUserId", "22222");
+        console.log(this.$store.state.curUserId);
+      }else{
+
+      }
+      // self
+      //   .$HTTPPost("/duser/login", {
+      //     loginName: self.ruleForm.username,
+      //     password: self.ruleForm.password
+      //   })
+      //   .then(data => {
+      //     localStorageSetItem("a", 2);
+
+      //     this.$router.push({
+      //       path: "/home"
+      //     });
+
+      //     self.$store.dispatch("updateCurUserId", "22222");
+      //     console.log(self.$store.state.curUserId);
+      //   })
+      //   .catch(err => {
+      //     console.log(err);
+      //   });
     }
   }
 };
@@ -62,26 +79,24 @@ export default {
 
 <style scoped>
 .login-wrap {
-  position: relative;
   width: 100%;
-  height: 100%;
+  height: calc(100vh);
+  background: rgb(50, 65, 87);
+  display: flex;
+  flex-direction: column;
 }
 .ms-title {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  margin-top: -230px;
+  margin-top: calc(20vh);
   text-align: center;
   font-size: 30px;
   color: #fff;
 }
 .ms-login {
-  position: absolute;
-  left: 50%;
-  top: 50%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
   width: 380px;
   height: 240px;
-  margin: -150px 0 0 -190px;
   padding: 40px;
   border-radius: 5px;
   background: #fff;
@@ -93,4 +108,5 @@ export default {
   width: 100%;
   height: 36px;
 }
+.desc{margin: 50px auto;}
 </style>

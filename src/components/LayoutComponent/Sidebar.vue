@@ -1,5 +1,6 @@
 <template>
-  <div class='sidebar left_container'>
+<!-- <el-aside class="aside" :style="{'width':isCollapse === false ? '200px':'60px'}"> -->
+  <div class='sidebar'>
     <div class="is_collapse">
       <i class="el-icon-sort" @click="handleClickMenuShow"></i>
     </div>
@@ -31,10 +32,9 @@
               </template>
           </template>
       </el-menu>
-
-
-  
   </div>
+<!-- </el-aside> -->
+
 </template>
 
 <script>
@@ -130,9 +130,7 @@ export default {
 }
 
 .sidebar {
-  display: block;
-  min-height: 660px;
-  max-height: calc(100vh);
+  height: calc(100vh+30px);
   text-align: left;
   background: rgb(50, 65, 87);
 }
@@ -142,5 +140,7 @@ export default {
   background: rgb(50, 65, 87);
   padding-bottom: 0px;
 }
-
+.aside{
+    background: rgb(50, 65, 87);
+}
 </style>
