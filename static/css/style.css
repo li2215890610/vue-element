@@ -1,0 +1,28 @@
+*{margin: 0;padding: 0;box-sizing:border-box;}
+li{list-style:none;}
+.marginHeight{height: 34px;width: 100%;}
+
+
+html,body,#app,.wrapper{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+}
+
+.tableWidth99{
+    width:100%;
+}
+
+/**
+登陆页背景
+**/
+.login-wrap {
+    background: #324157;
+}
+.marginTop15{margin-top: 15px;}
+.marginRight0{margin-right: 0;}
+
+
+.el-form-item.is-required .el-form-item__label:before{
+    content: '';
+}
