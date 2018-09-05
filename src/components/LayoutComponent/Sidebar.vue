@@ -1,5 +1,4 @@
 <template>
-<!-- <el-aside class="aside" :style="{'width':isCollapse === false ? '200px':'60px'}"> -->
   <div class='sidebar'>
     <div class="is_collapse">
       <i class="el-icon-sort" @click="handleClickMenuShow"></i>
@@ -33,7 +32,6 @@
           </template>
       </el-menu>
   </div>
-<!-- </el-aside> -->
 
 </template>
 
@@ -140,7 +138,5 @@ export default {
   background: rgb(50, 65, 87);
   padding-bottom: 0px;
 }
-.aside{
-    background: rgb(50, 65, 87);
-}
+
 </style>
