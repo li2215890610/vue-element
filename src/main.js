@@ -1,12 +1,50 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import ElementUI from 'element-ui'
+// import ElementUI from 'element-ui'
 
-Vue.use(ElementUI);
+// Vue.use(ElementUI);
+
+import {
+  Input, Button, Form, FormItem, Slider, Icon, Container, Header, Main, Footer, Row, Col, Menu, MenuItem, Submenu, Dropdown, DropdownMenu, DropdownItem, Table, TableColumn, Pagination, Dialog,
+  Message, DatePicker, Radio, Select, Option, Checkbox, CheckboxGroup, RadioGroup,
+  Upload
+} from 'element-ui'
+
+Vue.use(Input);
+Vue.use(Button);
+Vue.use(Form);
+Vue.use(FormItem);
+Vue.use(Slider);
+Vue.use(Icon);
+Vue.use(Container);
+Vue.use(Header);
+Vue.use(Main);
+Vue.use(Footer);
+Vue.use(Row);
+Vue.use(Col);
+Vue.use(Menu);
+Vue.use(MenuItem);
+Vue.use(Submenu);
+Vue.use(Dropdown);
+Vue.use(DropdownMenu);
+Vue.use(DropdownItem);
+Vue.use(Table);
+Vue.use(TableColumn);
+Vue.use(Pagination);
+Vue.use(Dialog);
+Vue.use(DatePicker);
+Vue.use(Radio);
+Vue.use(Select);
+Vue.use(Option);
+Vue.use(Checkbox);
+Vue.use(CheckboxGroup);
+Vue.use(RadioGroup);
+
+Vue.use(Upload);
+
+
 
 Vue.config.productionTip = false
 
@@ -27,8 +65,17 @@ import Vuex from 'vuex'
 
 Vue.config.productionTip = false
 
+Vue.prototype.$message = Message;
+
 //使用vuex
 Vue.use(Vuex)
+
+
+// import * as filters from './filters'; // 全局vue filter
+// //便利挂载过滤器
+// Object.keys(filters).forEach(key => {
+//   Vue.filter(key, filters[key])
+// });
 
 
 /**
