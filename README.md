@@ -2,6 +2,7 @@
 
 > 这是一个后台管理系统
 
+#  node 版本 8.17.0
 ## Build Setup
 
 ``` bash
